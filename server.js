@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 const db = mongoose.connection;
 const PORT = process.env.PORT || 3000;
+const Tattoo = require('./models/tattoo');
 
 //-----------------------------
 // Database
@@ -35,11 +36,15 @@ app.get('/', (req, res) => {
 });
 //-----------------------------
 // Index
-
+app.get('/tattoos', (req, res) => {
+    res.send('I work')
+})
 
 //-----------------------------
 // New
-
+app.get('/tattoos/new', (req, res) => {
+    res.render('new.ejs')
+})
 
 //-----------------------------
 // Delete
