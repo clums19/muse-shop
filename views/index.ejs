@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse Shop</title>
+</head>
+<body>
+    <h1>Muse Shop: Custom Temporary Tattoos</h1>
+    <div>
+        <% tattoos.forEach(tattoo => { %>
+            <a href="/tattoos/<%=tattoo._id%>"><%=tattoo.img%></a>
+        <% }) %> 
+    </div>
+    <nav>
+        <a href="/tattoos/new">Create a New Tattoo</a>
+    </nav>
+</body>
+</html>

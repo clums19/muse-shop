@@ -31,14 +31,15 @@ app.use(methodOverride('_method'));
 //-----------------------------
 // Routes
 //-----------------------------
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
-//-----------------------------
 // Index
+
 app.get('/tattoos', (req, res) => {
-    res.send('I work')
-})
+    Tattoo.find({}, (error, allTattoos) => {
+        res.render('index.ejs', {
+            tattoos: allTattoos,
+        });
+    });
+});
 
 //-----------------------------
 // New
@@ -56,7 +57,11 @@ app.get('/tattoos/new', (req, res) => {
 
 //-----------------------------
 // Create
-
+app.post('/tattoos', (req, res) => {
+    Tattoo.create(req.body, (error, createdTattoo) => {
+        res.redirect('/tattoos');
+    });
+});
 
 //-----------------------------
 // Edit

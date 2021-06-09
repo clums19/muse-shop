@@ -8,7 +8,7 @@ const tattooSchema = new Schema(
         img: String,
         price: Number,
         qty: Number
-});
+}, {timestamps: true});
 
 const Tattoo = mongoose.model('Tattoo', tattooSchema);
 
