@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const Tattoo = require('./models/tattoo');
-const tattooSeed = require('./models/tattooSeed');
 
 //-----------------------------
 // Database
@@ -29,10 +28,12 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 // Seed
+const tattooSeed = require('./models/tattooSeed');
+
 app.get('/tattoos/seed', (req, res) => {
     Tattoo.deleteMany({}, (error, allTattoos) => {});
     Tattoo.create(tattooSeed, (error, data) => {
-        res.send(req.body);
+        res.redirect('/tattoos');
     });
 });
 //-----------------------------
@@ -65,9 +66,9 @@ app.get('/tattoos/new', (req, res) => {
 //-----------------------------
 // Create
 app.post('/tattoos', (req, res) => {
-    // Tattoo.create(req.body, (error, createdTattoo) => {
-        res.send(req.body);
-    // });
+    Tattoo.create(req.body, (error, createdTattoo) => {
+        res.redirect('/tattoos');
+    });
 });
 
 //-----------------------------

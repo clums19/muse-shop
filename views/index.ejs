@@ -8,13 +8,15 @@
 </head>
 <body>
     <h1>Muse Shop: Custom Temporary Tattoos</h1>
-    <div>
-        <% tattoos.forEach(tattoo => { %>
-            <a href="/tattoos/<%=tattoo._id%>"><%=tattoo.img%></a>
-        <% }) %> 
-    </div>
     <nav>
         <a href="/tattoos/new">Create a New Tattoo</a>
     </nav>
+    <div>
+        <% tattoos.forEach(tattoo => { %>
+            <a href="/tattoos/<%=tattoo._id%>">
+                <img src="<%=tattoo.img%>"></a>
+        <% }) %> 
+    </div>
+   
 </body>
 </html>
