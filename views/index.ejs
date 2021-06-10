@@ -10,15 +10,19 @@
     <title>Muse Shop</title>
 </head>
 <body>
-    <h1>Muse Shop: Custom Temporary Tattoos</h1>
+    <video autoplay muted loop id="inkVideo">
+        <source src="https://i.imgur.com/rewL6II.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+    <h1>MUSE Shop: Custom Temporary Tattoos</h1>
     <nav>
         <a href="/tattoos/new">Create a New Tattoo</a>
     </nav>
     <div>
         <% tattoos.forEach(tattoo => { %>
-            <a href="/tattoos/<%=tattoo._id%>">
-                <img src="<%=tattoo.img%>"></a>
+            <a href="/tattoos/<%=tattoo._id%>"><img src="<%=tattoo.img%>"></a>
         <% }) %> 
+    </div>
     </div>
    
 </body>

@@ -1,12 +1,38 @@
-body {
-    background-color: rgb(170, 206, 135);
-    font-family: 'Lora', serif;
-    display: grid;
+* {
+    box-sizing: border-box;
 }
+body {
+    font-family: 'Lora', serif;
+    color: #f1f1f1;
+    margin: 0;
+    background: rgb(0, 0, 0);
+    max-width: 500px;
+    margin: auto;
+}
+h1 {
+    font-size: 50px;
+}
+
 img {
     max-width: 100%;
     width: 30%;
     height: auto;
-    float: left;
+    border-radius: 10%;
+    border-color: chartreuse;
+    border-style: solid;
+}
+#inkVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 80%;
+    min-height: 100%;
+}
+.content {
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0 , 0 , 0.5);
+    color: #f1f1f1;
+    width: 100%;
     padding: 20px;
 }
