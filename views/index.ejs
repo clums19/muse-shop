@@ -22,7 +22,9 @@
         <% tattoos.forEach(tattoo => { %>
         <li>
             <a href="/tattoos/<%=tattoo._id%>"><img src="<%=tattoo.img%>"></a>
-           
+            <form action="/tattoos/<%=tattoo._id%>/?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE"/>
+            </form>
             <a href="/tattoos/<%=tattoo._id%>/edit">Edit</a>
         </li>
         <% }) %> 

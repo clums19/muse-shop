@@ -56,7 +56,11 @@ app.get('/tattoos/new', (req, res) => {
 
 //-----------------------------
 // Delete
-
+app.delete('/tattoos/:id', (req, res) => {
+    Tattoo.findByIdAndDelete(req.params.id, (error, deletedTattoo) => {
+        res.redirect('/tattoos');
+    });
+});
 
 //-----------------------------
 // Update
