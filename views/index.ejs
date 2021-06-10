@@ -16,16 +16,16 @@
     <div class="content">
     <h1>MUSE Shop: Custom Temporary Tattoos</h1>
     <nav>
-        <a href="/tattoos/new">Create a New Tattoo</a>
+        <a class="newBtn" href="/tattoos/new">Create a New Tattoo</a>
     </nav>
     <ul style="list-style-type: none;">
         <% tattoos.forEach(tattoo => { %>
         <li>
-            <a href="/tattoos/<%=tattoo._id%>"><img src="<%=tattoo.img%>"></a>
-            <form action="/tattoos/<%=tattoo._id%>/?_method=DELETE" method="POST">
+            <a href="/tattoos/<%=tattoo._id%>"><img class="tattooImg" src="<%=tattoo.img%>"></a>
+            <form class="deleteBtn" action="/tattoos/<%=tattoo._id%>/?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE"/>
             </form>
-            <a href="/tattoos/<%=tattoo._id%>/edit">Edit</a>
+            <a class="editBtn" href="/tattoos/<%=tattoo._id%>/edit">Edit</a>
         </li>
         <% }) %> 
         </ul>

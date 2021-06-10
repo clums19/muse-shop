@@ -5,19 +5,43 @@ body {
     font-family: 'Lora', serif;
     color: #f1f1f1;
     margin: 0;
-    background: rgb(0, 0, 0);
-    max-width: 500px;
+    background: rgba(128, 255, 0, 0.562);
+    max-width: 600px;
     margin: auto;
 }
 h1 {
     font-size: 50px;
 }
+h2{
+    font-size: 50px;
+    color: black;
+    text-align: center;
+}
 li {
     padding-top: 20px;
+    display: inline-block;
+    max-width:250px;
+}
+
+.tattooImg{
+    min-width: 200px;
+}
+.editBtn, .newBtn{
+    background: rgb(126, 236, 15, 0.8);
+    border-radius: 10%;
+}
+.deleteBtn{
+    font-family: 'Lora', serif;
+}
+.tattooBuy {
+    background-color: black;
+    margin: auto;
+    text-align: center;
 }
 img {
+    padding: 5px;
     max-width: 100%;
-    width: 30%;
+    width: 200px;
     height: auto;
     border-radius: 10%;
     border-color: chartreuse;

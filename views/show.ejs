@@ -11,14 +11,14 @@
 </head>
 <body>
     <header>
-        <h1><%= tattoo.name %></h1>
+        <h2><%= tattoo.name %></h2>
     </header>
     <nav>
     <a href="/tattoos">Home</a>
         </nav>
-    <div>
+    <div class="tattooBuy">
         <ul style="list-style-type: none;">
-        <li><img src="<%= tattoo.img %>"/></li>
+        <li><img src="<%= tattoo.img %>"/></li><br/>
         <li><%= tattoo.description %> </li><br/>
         <li>Price: $<%= tattoo.price %> </li><br/>
         <li>Qty: <%= tattoo.qty %> </li><br/>
