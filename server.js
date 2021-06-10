@@ -21,8 +21,7 @@ db.on('connected', () => console.log('mongod connected'));
 db.on('disconnected', () => console.log('mongod disconnected'));
 //-----------------------------
 // Middleware
-app.use(express.static('public'));
-
+app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));

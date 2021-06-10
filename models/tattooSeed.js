@@ -13,37 +13,37 @@ module.exports = [
       qty: 3
     }, {
       name: 'Melanin',
-      description: 'Pisces made out of 2 fish',
+      description: 'The molecule for melanin',
       img: 'https://i.imgur.com/FH1wXPH.jpg',
       price: 25,
       qty: 5
     }, {
       name: 'Moon',
-      description: 'Pisces made out of 2 fish',
+      description: 'A simple cresent moon design',
       img: 'https://i.imgur.com/JnoJwJN.jpg',
       price: 25,
       qty: 1
     }, {
       name: 'Octopus',
-      description: 'Pisces made out of 2 fish',
+      description: 'A multi-demensional octopus design',
       img: 'https://i.imgur.com/TfpXYmL.jpg',
       price: 25,
       qty: 7
     }, {
       name: 'Sun',
-      description: 'Pisces made out of 2 fish',
+      description: 'A geometric take to a sun',
       img: 'https://i.imgur.com/QAwSom3.jpg',
       price: 25,
       qty: 2
     }, {
       name: 'Three Ls',
-      description: 'Pisces made out of 2 fish',
+      description: 'Love, Live, Laugh',
       img: 'https://i.imgur.com/ecjy7SI.jpg',
       price: 25,
       qty: 10
     }, {
       name: 'Triangles',
-      description: 'Pisces made out of 2 fish',
+      description: '3 triangles with multiple meanings',
       img: 'https://i.imgur.com/jOuKJN9.jpg',
       price: 25,
       qty: 6

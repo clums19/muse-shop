@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap" rel="stylesheet">
     <title>Custom Tattoo</title>
 </head>
 <body>
@@ -11,7 +14,14 @@
         <h1><%= tattoo.name %></h1>
     </header>
     <nav>
-        <a href="/tattoos">Home</a>
-    </nav>
+    <a href="/tattoos">Home</a>
+        </nav>
+    <div>
+        <ul>
+        <li><img src="<%= tattoo.img %>"/></li>
+        
+        </ul>
+    </div>
+  
 </body>
 </html>
