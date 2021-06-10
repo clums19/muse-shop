@@ -60,6 +60,13 @@ app.get('/tattoos/new', (req, res) => {
 
 //-----------------------------
 // Update
+app.put('/tattoos/:id', (req, res) => {
+    Tattoo.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, (error, updateTattoo) => {
+        res.redirect(`/tattoos/${req.params.id}`);
+    });
+});
 
 
 //-----------------------------
@@ -72,6 +79,13 @@ app.post('/tattoos', (req, res) => {
 
 //-----------------------------
 // Edit
+app.get('/tattoos/:id/edit', (req, res) => {
+    Tattoo.findById(req.params.id, (error, foundTattoo) => {
+        res.render('edit.ejs', {
+            tattoo: foundTattoo,
+        })
+    })
+})
 
 
 //-----------------------------

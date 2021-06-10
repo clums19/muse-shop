@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap" rel="stylesheet">
+    <title>Make a New Tattoo</title>
+</head>
+<body>
+    <header>
+        <h1> Create a New Tattoo</h1>
+        <a href="/tattoos">Home</a>
+    </header>
+    <form action="/tattoos/<%= tattoo._id %>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%= tattoo.name %>"/><br/>
+        Description: <input type="text" name="description" value="<%= tattoo.description %>"/><br/>
+        Image: <input type="text" name="img" value="<%= tattoo.img %>"/><br/>
+        Price: <input type="number" name="price" min="0" max="100" value="<%= tattoo.price %>"/><br/>
+        QTY: <input type="number" name="qty" min="0" max="10" value="<%= tattoo.qty %>"/><br/>
+        <input type="submit" value="Add New Tattoo"/><br/>
+    </form>
+</body>
+</html>

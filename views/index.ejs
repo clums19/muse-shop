@@ -18,11 +18,15 @@
     <nav>
         <a href="/tattoos/new">Create a New Tattoo</a>
     </nav>
-    <div>
+    <ul style="list-style-type: none;">
         <% tattoos.forEach(tattoo => { %>
+        <li>
             <a href="/tattoos/<%=tattoo._id%>"><img src="<%=tattoo.img%>"></a>
+           
+            <a href="/tattoos/<%=tattoo._id%>/edit">Edit</a>
+        </li>
         <% }) %> 
-    </div>
+        </ul>
     </div>
    
 </body>

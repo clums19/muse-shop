@@ -19,8 +19,11 @@
     <div>
         <ul style="list-style-type: none;">
         <li><img src="<%= tattoo.img %>"/></li>
-        <li><%= tattoo.description %> </li>
+        <li><%= tattoo.description %> </li><br/>
+        <li>Price: $<%= tattoo.price %> </li><br/>
+        <li>Qty: <%= tattoo.qty %> </li><br/>
         </ul>
+        <input type="submit" value="BUY">
     </div>
   
 </body>

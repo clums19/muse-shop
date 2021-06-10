@@ -12,7 +12,9 @@ body {
 h1 {
     font-size: 50px;
 }
-
+li {
+    padding-top: 20px;
+}
 img {
     max-width: 100%;
     width: 30%;
