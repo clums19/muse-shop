@@ -11,10 +11,12 @@
 </head>
 <body>
     <header>
-        <h1> Create a New Tattoo</h1>
-        <a href="/tattoos">Home</a>
+        <h2>Edit <%= tattoo.name %></h2>
     </header>
-    <form action="/tattoos/<%= tattoo._id %>?_method=PUT" method="POST">
+    <nav>
+        <a href="/tattoos">Home</a>
+    </nav>
+    <form class="tattooBuy" action="/tattoos/<%= tattoo._id %>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%= tattoo.name %>"/><br/>
         Description: <input type="text" name="description" value="<%= tattoo.description %>"/><br/>
         Image: <input type="text" name="img" value="<%= tattoo.img %>"/><br/>
